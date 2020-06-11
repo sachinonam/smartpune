@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "smartpune"
+    }
+  },
+  "defaultProject": "smartpune",
+  "cli": {
+    "analytics": "6b669590-fa8c-473a-95b4-725c30268fed"
+  }
 }

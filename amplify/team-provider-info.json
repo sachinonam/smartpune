@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-smartpune-dev-11725-authRole",
+            "UnauthRoleArn": "arn:aws:iam::338093282702:role/amplify-smartpune-dev-11725-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::338093282702:role/amplify-smartpune-dev-11725-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-smartpune-dev-11725-deployment",
+            "UnauthRoleName": "amplify-smartpune-dev-11725-unauthRole",
+            "StackName": "amplify-smartpune-dev-11725",
+            "StackId": "arn:aws:cloudformation:us-east-2:338093282702:stack/amplify-smartpune-dev-11725/1d6fcc40-ab79-11ea-b446-06d398e7edd6",
+            "AmplifyAppId": "d26vkzc7c9mn51"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d26vkzc7c9mn51",
+                    "type": "manual"
+                }
+            },
+            "auth": {
+                "smartpune87c39431": {}
+            }
+        }
+    }
+}
