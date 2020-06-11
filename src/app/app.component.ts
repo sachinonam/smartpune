@@ -9,7 +9,7 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 
-Amplify.configure(awsConfig)
+Amplify.configure(awsconfig)
 
 @Component({
   selector: 'app-root',
