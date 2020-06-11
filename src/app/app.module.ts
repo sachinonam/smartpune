@@ -1,6 +1,7 @@
 rt { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 /* Add Amplify imports */
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
@@ -12,7 +13,7 @@ Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [AmplifyUIAngularModule , Amplify, BrowserModule],
+  imports: [AmplifyUIAngularModule, BrowserModule,AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
