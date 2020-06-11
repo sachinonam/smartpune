@@ -13,9 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/smartpune",
-            "index": "src/index.html",
-            "main": "src/main.ts",
+            "outputPath": "src/app",
+            "index": "src/app/app.component.html",
+            "main": "src/app/app.component.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
