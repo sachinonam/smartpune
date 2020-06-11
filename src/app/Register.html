@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reachout</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+	<script type="text/javascript">
+function httpGetAsync()
+{
+    parameters=collect_data()
+
+    var xmlHttp = new XMLHttpRequest();
+	
+	
+	 
+	xmlHttp.open("GET", "https://yhe9n3wkh5.execute-api.us-east-2.amazonaws.com/registerAPI/register?"+parameters,false)
+    xmlHttp.send();
+	alert(xmlHttp.responseText)
+	document.body="<center><b>"+xmlHttp.responseText+"</b></center>"
+	
+	
+	
+}
+
+
+function collect_data(){
+    var User_id = 10
+	var User_name = document.getElementById("email_id").value
+	var User_Type = document.getElementById("user_type").value
+	var First_Name = document.getElementById("first_name").value
+	var Password = document.getElementById("password").value
+	var Last_Name = document.getElementById("last_name").value
+	var Availability_flag = 1
+	var Date_of_birth = '24-08-1995'
+	var address_1 = document.getElementById("address_1").value
+	var address_2 = document.getElementById("address_2").value
+	var citi_name = document.getElementById("city_name").value
+	var state_name = document.getElementById("state_name").value
+	var zip_code = document.getElementById("zip_code").value
+	var phone_number = document.getElementById("phone_number").value
+	var services = document.getElementById("services").value
+	var Email_address = document.getElementById("email_id").value
+	var parameters= "User_id="+User_id+"&User_name="+User_name+"&User_Type="+User_Type+"&First_Name="+First_Name+"&Password="+Password+"&Last_Name="+Last_Name+"&Availability_flag="+Availability_flag+"&Date_of_birth="+Date_of_birth+"&Email_address="+Email_address+"&address_1='"+address_1+"'&address_2='"+address_2+"'&zip_code="+zip_code+"&citi_name="+citi_name+"&state_name="+state_name+"&phone_number="+phone_number
+	return parameters
+}
+	</script>
+</head>
+
+<body>
+
+  <div class="login-clean" style="width: fit-content;min-width: fit-content;max-width: 1000;height:fit-content;">
+    <form style="height:fit-content ;width: 880;max-width: 700px;">
+      <h1 class="text-center">REGISTRATION FORM</h1>
+        <div class="container d-md-flex justify-content-md-center"><img class="d-md-flex justify-content-md-center" style="background-image: url(&quot;assets/img/reachout.png&quot;);width: 150px;" src="assets/img/reachout.png"></div>
+        
+        <div class="form-group">
+            <div class="row">
+    <div class="col">
+     
+        <div class="group">      
+            <input type="text" tabindex="1" id="first_name" required autofocus >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label >First Name</label>
+          </div>
+
+          <div class="group">      
+            <input type="text" tabindex="3" id="address_1" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Address 1</label>
+          </div>
+
+          <div class="group">      
+            <input type="text" tabindex="5" id="city_name" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>City Name</label>
+            </div>
+
+     <div class="group">      
+      <input type="number" tabindex="7" id="zip_code" title="Only numeric values allowed" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Zip Code</label>
+      </div>
+    
+      <div class="group">      
+        <input type="email" tabindex="9" id="email_id" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Email ID</label>
+      </div> 
+
+      <div style="border:none;height:120px";width:fit-content>  
+        <span id="top">Select Services: </span>  <br>
+        <select name="services" tabindex="10" id="services" multiple>
+        <option value="1">Pharmacy</option>
+        <option value="2">Grocery</option>
+        <option value="3">Food</option>
+      </select>
+        </div> 
+
+      
+
+      <div class="group">      
+        <input id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" tabindex="11" required="" title="Minimum 8 characters containing lowercase, uppercase, and at least one number" type="password" />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Password</label>
+      </div> 
+     
+      <div class="col offset-md-1"><button class="btn btn-primary btn-block" tabindex="13" type="submit" style="width: 200px;" onclick="httpGetAsync()" >Submit</button></div>
+
+    </div>
+    <div class="col" >
+        <div class="group">      
+            <input type="text" tabindex="2" id="last_name" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Last Name</label>
+          </div>   
+
+    
+          <div class="group">      
+            <input type="text" tabindex="4" id="address_2"required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Address 2</label>
+          </div>
+     
+          <div class="dropdown" style="border:none;width:400px;height:90px"> 
+          <span id="top">Select State: </span>  <br>
+          <select name="State Name" id="state_name" tabindex="6">
+          <option value="1">New York</option>
+          <option value="2">New Jersey</option>
+          <option value="3">South Carolina</option>
+        </select>
+        </div>
+
+    <div class="group">      
+      <input type="number" tabindex="8" id="phone_number" title="Only numeric values allowed" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Phone Number</label>
+    </div> 
+
+    
+    <div class="dropdown" style="border:none;height:207px">  
+      <span id="top">Select User Type: </span>  <br>
+      <select name="User Type" id="user_type" tabindex="11">
+      <option value="1">Helper</option>
+     <option value="2">Seeker</option>
+     <option value="3">Helper & Seeker Both</option>
+   </select>
+     </div> 
+
+
+    <div class="group">      
+      <input id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" tabindex="12" required="" title="Minimum 8 characters containing lowercase, uppercase, and at least one number" type="password" />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+            <label>Confirm Password</label>
+    </div> 
+
+    <div class="col"><button class="btn btn-primary btn-block" tabindex="14" type="submit" style="width: 200px;">Cancel</button></div>
+
+ </div>
+
+  
+ 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/password-confrimation.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/stylish-portfolio.js"></script>
+</body>
+
+</html>
