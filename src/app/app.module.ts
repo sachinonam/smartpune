@@ -13,7 +13,7 @@ Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [AmplifyUIAngularModule, BrowserModule],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })
