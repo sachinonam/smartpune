@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { withAuthenticator, Connect } from 'aws-amplify-react'
-import Amplify, { graphqlOperation } from 'aws-amplify'
-import { listPostLikes } from '../graphql/queries'
-import awsConfig from './aws-exports.js'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+
+/* Add Amplify imports */
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 Amplify.configure(awsConfig)
 
