@@ -14,7 +14,7 @@ Amplify.configure(awsconfig);
 @NgModule({
   declarations: [AppComponent],
   imports: [AmplifyUIAngularModule, BrowserModule],
-  providers: [],
+  providers: [AwsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
